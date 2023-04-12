@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="h1 text-center">{{ genre.name }}</div>
+    <div class="container mt-3">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Year</th>
+                <th>Budget</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for movie in genre.movies %}
+                <tr>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.description }}</td>
+                    <td>{{ movie.year }}</td>
+                    <td>{{ movie.Budget }}</td>
+                </tr>
+
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
